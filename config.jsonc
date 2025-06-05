@@ -1,8 +1,4 @@
-
-
 {
-
-
     "layer": "top",
     "position": "bottom",
     "mod": "dock",
@@ -26,7 +22,7 @@
 		"custom/spotify",
 		"custom/r_end",
 		"custom/padd","custom/l_end",
-		"network","pulseaudio","pulseaudio#microphone","custom/updates",
+		"network","pulseaudio",
 		"custom/r_end","custom/l_end","tray",
 		"custom/r_end","custom/padd"],
 
@@ -34,7 +30,7 @@
     "format": "{}°",
     "tooltip": true,
     "interval": 3600,
-    "exec": "wttrbar --location Lublin",
+    "exec": "wttrbar --location Swidnik,Lubelskie",
     "return-type": "json"
     },
 
@@ -153,17 +149,6 @@
         "scroll-step": 5
     },
 
-    "custom/updates": {
-        "exec": "systemupdate.sh",
-        "return-type": "json",
-        "format": "{}",
-        "rotate": 0,
-        "on-click": "hyprctl dispatch exec 'systemupdate.sh up'",
-        "interval": 86400, // once every day
-        "tooltip": true,
-        "signal": 20,
-    },
-
     "tray": {
         "icon-size": 18,
         "rotate": 0,
@@ -171,7 +156,7 @@
     },
 
     "custom/spotify": {
-        "exec": "mediaplayer.py --player spotify",
+        "exec": "python ~/.config/waybar/mediaplayer.py --player spotify",
         "format": " {}",
         "rotate": 0,
         "return-type": "json",
